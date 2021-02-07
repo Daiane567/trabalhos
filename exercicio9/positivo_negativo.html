@@ -1,0 +1,32 @@
+<!--Faça um Programa que peça um valor e mostre
+ na tela se o valor é positivo ou negativo.-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="stilooo.css">
+     <title>Positivo e Negativo</title>
+     Digite um numero: <input id="numero" type="number"> 
+   <button onclick="teste()">Testar</button>
+ </head>
+ <body>
+    <script type="text/javascript">
+        function teste(){
+         var num = parseFloat(document.getElementById("numero").value);
+         
+         if (num > 0)
+          alert(num + " é Positivo");
+         else
+          if(num < 0)
+           alert(num + " é Negativo");
+          else
+           alert(" nulo");
+        }
+     </script>
+     
+ </body>
+ </html>
+
+ 
