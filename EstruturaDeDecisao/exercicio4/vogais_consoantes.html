@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="letra">
+        <button onclick="verifica();">verifica</button>
+    </div>
+    <header>
+        <h1>
+             Faça um Programa que verifique se uma letra digitada é vogal ou consoante
+        </h1>
+        <script>
+            function verifica(){
+                var letra = document.getElementById("letra").value;
+                var vogalA = 'a';
+                var vogalE = 'e';
+                var vogalI = 'i';
+                var vogalO = 'o';
+                var vogalU = 'u';
+            if(letra==vogalA || letra==vogalE || letra==vogalI || letra== vogalO || letra==vogalU ){
+                alert("vogal");
+            }else{
+                alert("consonte");
+            }
+            }
+
+        </script>
+    </header>
+</body>
+</html>

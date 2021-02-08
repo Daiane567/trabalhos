@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        ORDEM DECRESCENTE
+    </h1>
+    <p></p>
+    <input id="v1" type="number">
+    <p></p>
+    <input id="v2" type="number">
+    <p></p>
+    <input id="v3" type="number">
+    <p></p>
+    <button onclick="funcao()">Ordenar</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script type="text/javascript">
+
+function funcao(){
+
+        function decr (pr1, pr2){
+            return pr2 - pr1;
+        }
+
+        var vetOr = Array(
+            (document.getElementById("v1").value),
+            (document.getElementById("v2").value),
+            (document.getElementById("v3").value));
+
+        var vetDecr = vetOr;
+        
+        document.getElementById("result2").innerHTML = "Ordem Decrescente: " + vetDecr.sort(decr);
+    }
+</script>
+
+</body>
+</html>
