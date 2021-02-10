@@ -29,51 +29,62 @@
         const NUMERO3 = parseFloat(document.getElementById("numero3").value);
         if (NUMERO1 > NUMERO2 && NUMERO1 > NUMERO3) {
           document.getElementById("resultado").textContent =
-            "O maior número é o 1";
+          NUMERO1+""
+            //"O maior número é o 1";
             //O if tem que ficar no mesmo fluxo//
             //Fluxo1 
             //O maior número é o um,agora tenho que verificar os números 2 e 3
 
             if (NUMERO3<NUMERO2){
                 document.getElementById("resultado").textContent +=
-             "O menor número é o 3";
+                NUMERO2+""+NUMERO3
+            // "O menor número é o 3 e o numero2 é do meio";
 
             }
             if(NUMERO2<NUMERO3){
                 document.getElementById("resultado").textContent +=
-             "O menor número é o 2";
+                NUMERO+""+NUMERO2
+            // "O menor número é o 2 e o numero 3 é o do meio";
 
             }
         } else if (NUMERO2 > NUMERO1 && NUMERO2 > NUMERO3) {
             document.getElementById("resultado").textContent =
-             "O maior número é o 2";
+            NUMERO2+""
+             //"O maior número é o 2";
             // O if tem que ficar no mesmo fluxo
             //Fluxo2
             //O maior número é o 2,agora tenho que verificar os números 3 e 1
              if(NUMERO3<NUMERO1){
                 document.getElementById("resultado").textContent +=
-             "O menor número é o 3";""
+                NUMERO2+""+NUMERO3
+            // "O menor número é o 3 e o numero 2 é o do meio";
 
             }
             if(NUMERO1<NUMERO3){
                 document.getElementById("resultado").textContent +=
-             "O menor número é o 1";
+                NUMERO3+""+NUMERO1
+            // "O menor número é o 1 e o numero 3 é o do meio";
             }
             
 
         }else if (NUMERO3>NUMERO2 && NUMERO3>NUMERO1){
             document.getElementById("resultado").textContent =
-             "O maior número é o 3";
+            NUMERO3+""
+             //"O maior número é o 3"+NUMERO3;
             // O if tem que ficar no mesmo fluxo//
             //Fluxo3 
             //O maior número é o 3,agora tenho que verificar os números 1 e 2
              if (NUMERO1<NUMERO2){
                 document.getElementById("resultado").textContent +=
-             "O menor número é o 1";
+                NUMERO2+""+NUMERO1
+            // "O menor número é o 1 e o 2 é o do meio";
 
              }else if(NUMERO2<NUMERO1){
-                document.getElementById("resultado").textContent +=
-             "O menor número é o 2";
+              document.getElementById("resultado").textContent +=
+              NUMERO1  +""+   NUMERO2
+
+              //"número é o menor 2 e o 1 do meio "=NUMERO2+(NUMERO1);
+            // Numero1+ " " + Numero2 + " " + Numero3
 
              }
 
