@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- Faça um Programa que peça os 3 lados de um triângulo. O programa 
+    deverá informar se os valores podem ser um triângulo. Indique, caso 
+    os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+
+    Dicas:
+    Três lados formam um triângulo quando a soma de quaisquer dois lados
+     for maior que o terceiro;
+    Triângulo Equilátero: três lados iguais;
+    Triângulo Isósceles: quaisquer dois lados iguais;
+    Triângulo Escaleno: três lados diferentes; -->
+
+    <h1>Lados de um triângulo</h1>
+
+    Digite o lado do triangulo:<input type="number" id="numero1"><br><br>
+    Digite o lado do triangulo:<input type="number" id="numero2"><br><br>
+    Digite o lado do triangulo:<input type="number" id="numero3"><br><br>
+    <button onclick="verifica();">verifica</button>
+    <div id="resultado" class="result"></div>
+
+    <script>
+        function verifica(){
+            var ladoA = parseFloat(document.getElementById("numero1").value);
+            var ladoB = parseFloat(document.getElementById("numero2").value);
+            var ladoC = parseFloat(document.getElementById("numero3").value);
+            
+
+            if(ladoA==ladoB && ladoA==ladoC){
+                document.getElementById("resultado").innerHTML= 
+                "Triangulo Equilátero"
+            }
+             if(ladoA!=ladoB && ladoA!=ladoC){
+                document.getElementById("resultado").innerHTML= 
+                "Triangulo Escaleno"
+            }
+             if(ladoA==ladoB && ladoA!==ladoC){
+                document.getElementById("resultado").innerHTML= 
+                "Triangulo Isósceles"
+               
+            }else(ladoA==ladoC && ladoA!=ladoB)
+            document.getElementById("resultado").innerHTML= 
+               "Triangulo Isósceles"
+               
+            
+        }
+    </script>
+</body>
+</html>

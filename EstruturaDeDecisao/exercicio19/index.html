@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Faça um Programa que leia um número inteiro menor que 
+    1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+
+    Observando os termos no plural a colocação do "e", da vírgula
+     entre outros. Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 
+    320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16 -->
+    
+    Digite a centena:<input type="number" id="numero1"><br><br>
+    Digite a dezena:<input type="number" id="numero2"><br><br>
+    Digite a unidade:<input type="number" id="numero3"><br><br>
+    <button onclick="verifica();">verifica</button>
+    <div id="resultado" class="result"></div>
+    <script>
+        function verifica(){
+            var numeroA = parseFloat(document.getElementById("numero1").value);
+            var numeroB = parseFloat(document.getElementById("numero2").value);
+            var numeroC = parseFloat(document.getElementById("numero3").value);
+       
+            document.getElementById("resultado").innerHTML= 
+               +numeroA+ "CENTENA"+numeroB+"DEZENA"+numeroC+"UNIDADE"
+                
+        }
+    </script>
+
+
+
+
+</body>
+</html>

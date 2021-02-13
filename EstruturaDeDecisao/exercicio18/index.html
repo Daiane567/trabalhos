@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Faça um Programa que peça uma data no
+    formato dd/mm/aaaa e determine se a mesma é uma data válida.--> 
+    <h1>DATA</h1>
+    Dia:<input type="number" id="numero1"><br><br>
+    Mês:<input type="number" id="numero2"><br><br>
+    Ano:<input type="number" id="numero3"><br><br>
+    <button onclick="verifica();">verifica</button>
+    <div id="resultado" class="result"></div>
+    <script>
+        function verifica(){
+            var dia = parseFloat(document.getElementById("numero1").value);
+            var mes = parseFloat(document.getElementById("numero2").value);
+            var ano = parseFloat(document.getElementById("numero3").value);
+            
+            document.getElementById("resultado").innerHTML= 
+               dia +"/"+mes+"/"+ano
+        }
+    </script>
+
+
+    
+</body>
+</html>

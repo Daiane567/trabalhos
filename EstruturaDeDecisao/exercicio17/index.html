@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Faça um Programa que peça um número correspondente a um determinado
+     ano e em seguida informe se este ano é ou não bissexto. -->
+     Digite o ano:<input type="number" id="numero"><br><br>
+    <button onclick="verifica();">verifica</button>
+    <div id="resultado" class="result"></div>
+    <script>
+        function verifica(){
+            var ano = parseFloat(document.getElementById("numero").value);
+            var bissexto = 4;
+            var referencia = 2020;
+           // if(ano == referencia){
+               // document.getElementById("resultado").innerHTML= 
+                //"bissexto"
+
+             if(ano-=bissexto){
+                document.getElementById("resultado").innerHTML= 
+                "bissexto"
+
+            }else {
+                document.getElementById("resultado").innerHTML=
+                "nulo"
+
+            }
+        }
+    </script>
+
+    
+</body>
+</html>
