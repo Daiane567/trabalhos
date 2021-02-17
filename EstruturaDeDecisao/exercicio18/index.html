@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Faça um Programa que peça uma data no
-    formato dd/mm/aaaa e determine se a mesma é uma data válida.--> 
+    formato dd/mm/aaaa e determine se a mesma é uma data válida.-->
     <h1>DATA</h1>
-    Dia:<input type="number" id="numero1"><br><br>
-    Mês:<input type="number" id="numero2"><br><br>
-    Ano:<input type="number" id="numero3"><br><br>
+    Dia:<input type="number" id="dia" /><br /><br />
+    Mês:<input type="number" id="mes" /><br /><br />
+    Ano:<input type="number" id="ano" /><br /><br />
     <button onclick="verifica();">verifica</button>
     <div id="resultado" class="result"></div>
     <script>
-        function verifica(){
-            var dia = parseFloat(document.getElementById("numero1").value);
-            var mes = parseFloat(document.getElementById("numero2").value);
-            var ano = parseFloat(document.getElementById("numero3").value);
-            
-            document.getElementById("resultado").innerHTML= 
-               dia +"/"+mes+"/"+ano
+      function verifica() {
+        var dia = parseInt(document.getElementById("dia").value);
+        var mes = parseInt(document.getElementById("mes").value);
+        var ano = parseInt(document.getElementById("ano").value);
+        var valida = false;
+        if(ano <= 2021 && ano >0){
+            if ( mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 10 || mes == 12) {
+                if (dia > 0 && dia <= 31) {
+                    valida = true;
+                }
+            } else if (mes != 2 && mes >= 1 && mes <= 12) {
+                if (dia > 0 && dia <= 30) {
+                    valida = true;
+                }
+            } else if (mes == 2) {
+                var bissexto = false;
+                if (ano % 4 == 0) {
+                    if (ano % 100 == 0) {
+                        if (ano % 400 == 0) {
+                            bissexto = true;
+                        } else {
+                            bissexto = false;
+                        }
+                    } else {
+                        bissexto = true;
+                    }
+                } else {
+                    bissexto = false;
+                }
+
+                if(bissexto && dia<=29 && dia>0){
+                    valida = true
+                }else if (dia <=28  && dia>0){
+                    valida = true
+                }
+            }
         }
+        
+        if(valida){
+            document.getElementById("resultado").innerHTML =
+          dia + "/" + mes + "/" + ano+ " E UMA DATA VALIDA";
+        }else{
+            document.getElementById("resultado").innerHTML =
+          dia + "/" + mes + "/" + ano+ " NAO E VALIDO!!!";
+        }
+
+       
+      }
     </script>
-
-
-    
-</body>
+  </body>
 </html>

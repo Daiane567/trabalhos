@@ -15,20 +15,63 @@
     326 = 3 centenas, 2 dezenas e 6 unidades
     12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 
     320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16 -->
-    
-    Digite a centena:<input type="number" id="numero1"><br><br>
-    Digite a dezena:<input type="number" id="numero2"><br><br>
-    Digite a unidade:<input type="number" id="numero3"><br><br>
+    <p>
+    Exemplo:
+    326 = 3 centenas, 2 dezenas e 6 unidades
+    12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 
+    320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
+    </p>
+    Digite o numero:<input type="text" id="numero"><br><br>
     <button onclick="verifica();">verifica</button>
     <div id="resultado" class="result"></div>
     <script>
         function verifica(){
-            var numeroA = parseFloat(document.getElementById("numero1").value);
-            var numeroB = parseFloat(document.getElementById("numero2").value);
-            var numeroC = parseFloat(document.getElementById("numero3").value);
+            var numero = parseInt(document.getElementById("numero").value);
        
-            document.getElementById("resultado").innerHTML= 
-               +numeroA+ "CENTENA"+numeroB+"DEZENA"+numeroC+"UNIDADE"
+            // aumento de  25%  -> multiplica por  1.25, exemplo 325 + 25% de taxas -> 325* 1.25 = 406.25
+            // desconto de  25%  -> multiplica por  0.25, exemplo 325 - 25% de taxas -> 325* 0.25 = 81.25
+            // novo preco do desconto => 325 - 81.25 => 243.75 OU SEJA -> valor - (valor*0.25)
+
+
+            // 326
+            var centenas = parseInt(numero/100); // 0.26
+            
+            var dezenas = parseInt(((numero/100)-centenas)*10)
+
+            var unidades = numero-(centenas*100 + dezenas*10)
+            
+            var texto = ""
+            //terminar
+
+            if(centenas>1){
+                texto = centenas+ "centenas ";
+            }else if(centenas==1){
+                texto = centenas+ "centena "
+            }
+
+
+            if(centenas>=1 && dezenas>=1 && unidades>=1){
+                texto += ", "
+            }else if(centenas>=1 && dezenas>=1){
+                texto += "e "
+            }
+
+            if(dezenas>1){
+                texto += dezenas+ "dezenas ";
+            }else if(dezenas==1){
+                texto += dezenas+ "dezena "
+            }
+
+            if(unidades>=1 &&  (dezenas>=1 || centenas>=1)){
+                texto += "e "
+            }
+
+            if(unidades>1){
+                texto += unidades+ "unidades"
+            }else if(unidades==1){
+                texto += unidades+ "unidade"
+            }
+            document.getElementById("resultado").innerHTML= texto
                 
         }
     </script>

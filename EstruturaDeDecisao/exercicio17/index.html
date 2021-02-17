@@ -17,18 +17,26 @@
             var ano = parseFloat(document.getElementById("numero").value);
             var bissexto = 4;
             var referencia = 2020;
-           // if(ano == referencia){
-               // document.getElementById("resultado").innerHTML= 
-                //"bissexto"
+           /*
+               1- Se o ano for uniformemente divisível por 4, vá para a etapa 2. Caso contrário, vá para a etapa 5.
+               2-  Se o ano for uniformemente divisível por 100, vá para a etapa 3. Caso contrário, vá para a etapa 4.
+               3- Se o ano for uniformemente divisível por 400, vá para a etapa 4. Caso contrário, vá para a etapa 5.
+               4- O ano é bissexto (tem 366 dias).
+               5- O ano não é um ano bissexto (tem 365 dias).
+            */
 
-             if(ano-=bissexto){
-                document.getElementById("resultado").innerHTML= 
-                "bissexto"
-
-            }else {
-                document.getElementById("resultado").innerHTML=
-                "nulo"
-
+            if(ano%4==0){
+                if(ano%100==0) {
+                    if(ano%400==0){
+                        document.getElementById("resultado").innerHTML = ano+" é bissexto"
+                    }else{
+                        document.getElementById("resultado").innerHTML = ano+" NAO é bissexto"
+                    }
+                }else{
+                    document.getElementById("resultado").innerHTML = ano+" é bissexto"
+                }
+            }else{
+                document.getElementById("resultado").innerHTML = ano+" NAO é bissexto"
             }
         }
     </script>
