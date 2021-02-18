@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //faça um programa que leia os pontos de determinado jogo para
+      // N jogadores em M rodadas e mostre quem foi o vencedor.
+      //var jogadores=7;jogadores>i;i++
+      var n = parseFloat(prompt("qual o número de jogadores?"));
+      var m = parseFloat(prompt("quantas rodadas?"));
+      var melhorpontodetodos = 0;
+      var maiorjogador = 0;
+      var maiorponto = 0;
+      for (var jogador = 0; jogador < n; jogador++) {
+        maiorponto = 0;
+        for (var rodada = 0; rodada < m; rodada++) {
+          var pontos = parseFloat(prompt(rodada + "  quantos pontos?"));
+          console.log("maiorpontos antes do if" + maiorponto);
+
+          if (pontos > maiorponto) {
+            maiorponto = pontos;
+          }
+          console.log("maiorponto depois do if" + maiorponto);
+        }
+
+        if (maiorponto > melhorpontodetodos) {
+          melhorpontodetodos = maiorponto;
+          maiorjogador = jogador;
+        }
+      }
+      console.log(maiorponto);
+      console.log("o maior é:" + maiorponto);
+      console.log("o jogador é:" + jogador);
+    </script>
+  </body>
+</html>
