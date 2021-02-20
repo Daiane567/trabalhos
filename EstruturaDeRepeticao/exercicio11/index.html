@@ -10,11 +10,17 @@
 </head>
 <body>
     <!--Faça um programa que leia 5 números e informe o maior número. -->
-    <script>
-               for( var i=0;i<5; i++){
+    <script> 
+    var maior = 0 ;
+    
+               for( var i=0 ;i<5; i++){
             //document.getElementById("i").textContent+= 
             //"numero é"+i
-             prompt("Digite o numero:");
+            prompt("Digite o numero:");
+            if(i>=maior){
+            maior=i;
+            
+            }console.log(maior);
             }
            
 

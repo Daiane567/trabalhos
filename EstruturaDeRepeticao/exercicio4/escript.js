@@ -2,12 +2,11 @@
 //de dois números através de somas
 //consecutivas
 //ar soma = i +=numero;
-var A =   A+=numero;
-for (var A = 0; A < 2; A++) {
-    var numero = parseFloat(prompt("Digite o número:"));
-    if (numero < 0){
-        //soma++;
-        //console.log("Valor");
-    }
+var numero1 = parseFloat(prompt("Digite o número:"));
+for (numero1 = 0; numero1<5; numero1++) {
+    var numero2 = parseFloat(prompt("Digite o número:"));
+    resultado=numero1+=numero1
+
+    console.log(resultado);
+        
 }
-console.log("Valor"+ A );
