@@ -11,13 +11,21 @@
     <script>
         //Faça um programa que imprima na tela apenas
          //os números ímpares entre 1 e 50. 
-         A+=5;
 
         for( var i=1;i<50; i+=2){
             document.getElementById("i").textContent+= 
             "numero é"+i
             }
            
+        // OU
+
+        for(var i=1; i<50;i++){
+            if(i%2==0){
+                document.getElementById("i").textContent+= 
+            "numero é"+i;
+            }
+           
+        }
 
     </script>
 </body>

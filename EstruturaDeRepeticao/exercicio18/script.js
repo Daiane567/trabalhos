@@ -4,18 +4,22 @@
  //mostrar o número de votos de cada candidato. 
  var A = 0
  var B = 0
- var C = 0]
- var voto = prompt("Digite A ,B,C");
- var eleitores = prompt("Quantos eleitores?");
-  while(votos<eleitores){
-    if(voto == A){
-        alert("condidato"+A);
-    }else (voto == B){
-        alert("candidato"+B);
-    }else (voto == C){
-        alert("candidato"+C);
-    }
+ var C = 0
 
- 
+var eleitores = parseInt(prompt("Quantos eleitores?"));
+
+for(var i=0;i<eleitores;i++){
+  var voto = prompt("Digite A ,B,C");
+  if(voto=="A"){
+    A++;
+    // A = A + 1
+    console.log("Voce votou no A");
+  }else if(voto == "B"){
+    B++;
+    console.log("Voce votou no B");
+  }else if(voto == "C"){
+    C++;
+    console.log("Voce votou no C");
   }
-if (voto == 1): candidatoa = candidatoa + 1elif(voto == 2):candidatob = candidatob + 1elif(voto == 3):candidatoc = candidatoc + 1votantes = votantes + 1print("O candidato A teve", candidatoa, "votos.")print("O candidato B teve", candidatob, "votos.")print("O candidato C teve", candidatoc
+}
+console.log("Candidato A: "+A+" Candidato B:"+B+" Candidato C:"+C);
